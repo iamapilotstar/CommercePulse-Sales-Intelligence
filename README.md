@@ -3,17 +3,17 @@
 
 **The Problem**
 
-Retail businesses often operate with fragmented sales data spread across products, cities, promotions, and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
+Retail businesses often operate with fragmented sales data spread across products, cities, promotions and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
-As a result, decision-makers are forced to rely on static reports or delayed insights, slowing down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
+As a result, decision-makers are forced to rely on static reports or delayed insights which slows down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
 
 ---
 
 **The Solution**
 
-I designed and built an interactive Power BI dashboard that transforms raw, fragmented retail sales data into a unified decision-making command center.
+I designed and built an interactive Power BI dashboard that transforms raw and fragmented retail sales data into a unified decision-making command center.
 
-The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders, providing dynamic insights into:
+The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a dynamic insights into:
 
 • Product performance
 
@@ -23,7 +23,15 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders, providing 
 
 • Profitability and order behavior
 
-Using SQL for data extraction, Power Query for transformation, and a star-schema data model, the dashboard enables fast, cross-dimensional slicing by product, city, promotion, and time. KPIs are powered by DAX measures and updated dynamically through filters and drilldowns. 
+I utilized SQL for data extraction, Power Query Editor for data transformation, and implemented a star-schema data model to optimize analytical performance and usability. The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
+
+Why Star Schema?
+
+• Faster query performance: All dimension tables connect directly to the fact table, reducing join complexity and enabling quicker aggregations and dashboard responsiveness.
+
+• Simpler and intuitive analysis: Makes slicing and filtering by product, city, promotion, and time straightforward for both BI tools and business users.
+
+• Optimized for BI tools: Power BI and DAX are designed to work most efficiently with star schemas, resulting in more reliable relationships and faster calculations.
 
 ---
 
