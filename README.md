@@ -1,5 +1,6 @@
 # CommercePulse-Sales-Intelligence
 An end-to-end retail sales intelligence project built using SQL, Power Query, and Power BI. This dashboard transforms fragmented transactional data into actionable insights for inventory optimization, campaign ROI analysis, and executive decision-making.
+
 ---
 
 💡 The Problem
@@ -7,6 +8,7 @@ An end-to-end retail sales intelligence project built using SQL, Power Query, an
 Retail businesses often operate with fragmented sales data spread across products, cities, promotions, and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
 As a result, decision-makers are forced to rely on static reports or delayed insights, slowing down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
+
 ---
 
 🔧 The Solution
@@ -22,26 +24,32 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders, providing 
 
 Using SQL for data extraction, Power Query for transformation, and a star-schema data model, the dashboard enables fast, cross-dimensional slicing by product, city, promotion, and time. KPIs are powered by DAX measures and updated dynamically through filters and drilldowns 
 
+---
+
 🛠️ Tools & Technologies
 
 • MS SQL Server – Data extraction and querying
 • Power Query – ETL, data cleaning, transformation
 • Power BI – Dashboarding, DAX measures, visual analytics
 
+---
+
 🧪 Technical Approach
-Data Engineering & Modeling
+Data Engineering, Modeling & Data Preparation
 
-• Built a centralized fact table with one-to-many relationships to dimension tables (Product, Customer, Promotion, Calendar) using a star schema.
-• Implemented transaction-level validation tables to reconcile raw records with aggregated KPIs, ensuring trust in reported metrics.
-• Standardized formats, handled missing values, and derived calculated fields using Power Query 
+This project follows a structured business intelligence pipeline, ensuring that all reported metrics are accurate, traceable, and decision-ready.
 
-Data Cleaning & Feature Engineering (Power Query)
+I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
 
-Raw transactional sales data often contains missing values, inconsistent pricing, and incomplete promotion logic. To ensure analytical accuracy and business trust, I implemented a structured data cleaning and feature engineering pipeline inside Power Query.
+To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
+
+All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting..
 
 1. Discount Percentage Mapping
 
-The dataset did not contain an explicit discount percentage column. Instead, discounts were inferred using Promotion IDs.
+he dataset did not contain a dedicated numerical discount percentage column. Instead, discount information was embedded inside a Price Reduction Type field, which consisted of a mix of text and numbers (e.g., “Buy One Get One Free”, “20% Discount”).
+
+To standardize this, I first created a discount mapping logic and then brought the cleaned discount values into the fact table using a Merge Query with a Left Outer Join.
 
 I created a conditional logic mapping:
 
@@ -53,15 +61,13 @@ This ensured that all discount logic was standardized and analytically usable.
 
 2. Price Per Unit Imputation
 
-The fact table contained missing values for Price Per Unit.
+To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
 
-To resolve this:
+• Pull the correct price_per_unit from the product master
+• Maintain all transactional records from the fact table
+• Populate missing price values without losing sales data
 
-• I performed a Left Outer Join with the Product Dimension table
-• Pulled the correct price_per_unit from the product master
-• Retained only the required pricing field
-
-This guaranteed pricing consistency across all transactions.
+This step ensured pricing consistency across all transactions and preserved referential integrity.
 
 3. Derived Business Metrics
 
