@@ -23,7 +23,9 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a
 
 • Profitability and order behavior
 
-I utilized SQL for data extraction, Power Query Editor for data transformation, and implemented a star-schema data model to optimize analytical performance and usability. The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
+• I utilized SQL for data extraction, Power Query Editor for data transformation, and implemented a star-schema data model to optimize analytical performance and usability. 
+
+• The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
 
 Why Star Schema?
 
