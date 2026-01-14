@@ -42,6 +42,8 @@ Data Engineering, Modeling & Data Preparation
 
 • All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting..
 
+---
+
 **Discount Percentage Mapping**
 
 The dataset did not contain a dedicated numerical discount percentage column. Instead, discount information was embedded inside a Price Reduction Type field, which consisted of a mix of text and numbers (e.g., “Buy One Get One Free”, “20% Discount”).
@@ -56,6 +58,8 @@ I created a conditional logic mapping:
 
 This ensured that all discount logic was standardized and analytically usable.
 
+---
+
 **Price Per Unit Imputation**
 
 To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
@@ -65,6 +69,8 @@ To resolve this, I performed a Merge Query using a Left Outer Join with the Prod
 • Populate missing price values without losing sales data
 
 This step ensured pricing consistency across all transactions and preserved referential integrity.
+
+---
 
 **Derived Business Metrics**
 
@@ -77,6 +83,8 @@ Several core KPIs did not exist in raw form and were engineered manually:
 
 These derived columns enabled deeper business-level analysis rather than surface-level reporting.
 
+---
+
 **Missing Value Handling**
 
 • Null discount values were replaced with 0 (indicating no promotion)
@@ -84,6 +92,8 @@ These derived columns enabled deeper business-level analysis rather than surface
 • Removed invalid or incomplete rows where necessary
 
 This step ensured mathematical stability and prevented visual or KPI distortions.
+
+---
 
 **Analytical Integrity**
 
@@ -95,6 +105,8 @@ Every transformation was designed to preserve financial accuracy and business lo
 
 This step is critical in enterprise BI systems, where incorrect numbers destroy credibility.
 
+---
+
 **Findings:**
 
 • Top & Bottom 5 Products: Ranked by both revenue and quantity to guide inventory prioritization.
@@ -102,6 +114,8 @@ This step is critical in enterprise BI systems, where incorrect numbers destroy 
 • KPI Dashboard: Total Sales, Orders, Profit Margin (9.45%), AOV (₹36.9K).
 • Time-Series Analysis: Year-over-year trends from 2020–2023, with 2023 peaking at ₹32.3M.
 • Category-level breakdowns for profitability and discount efficiency.
+
+---
 
 **Technical Report**
 
@@ -115,6 +129,8 @@ This repository contains the interactive Power BI dashboard and detailed documen
 
 🖥️ Desktop: Sidebar
 📱 Mobile: Top of page
+
+---
 
 **Value Delivered**
 
