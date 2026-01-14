@@ -111,7 +111,9 @@ These derived columns enabled deeper business-level analysis rather than surface
 **Missing Value Handling**
 
 • Null discount values were replaced with 0 (indicating no promotion).
+
 • Ensured no nulls remained in pricing or revenue-impacting fields.
+
 • Removed invalid or incomplete rows where necessary.
 
 This step ensured mathematical stability and prevented visual or KPI distortions.
@@ -123,7 +125,9 @@ This step ensured mathematical stability and prevented visual or KPI distortions
 • Every transformation was designed to preserve financial accuracy and business logic. This ensured that:
 
 • KPI totals matched transaction-level sums.
+
 • Revenue and profit calculations were fully traceable.
+
 • Aggregated metrics could be trusted by stakeholders.
 
 This step is critical in enterprise BI systems, where incorrect numbers destroy credibility.
