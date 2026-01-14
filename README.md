@@ -110,9 +110,13 @@ This step is critical in enterprise BI systems, where incorrect numbers destroy 
 **Findings:**
 
 • Top & Bottom 5 Products: Ranked by both revenue and quantity to guide inventory prioritization.
+
 • Campaign Comparison: Built side-by-side analysis of promotional effectiveness (Summer Sale ₹4.26M vs Weekend Flash ₹1.87M).
+
 • KPI Dashboard: Total Sales, Orders, Profit Margin (9.45%), AOV (₹36.9K).
+
 • Time-Series Analysis: Year-over-year trends from 2020–2023, with 2023 peaking at ₹32.3M.
+
 • Category-level breakdowns for profitability and discount efficiency.
 
 ---
@@ -122,9 +126,13 @@ This step is critical in enterprise BI systems, where incorrect numbers destroy 
 This repository contains the interactive Power BI dashboard and detailed documentation explaining:
 
 • Data model architecture
+
 • KPI calculations
+
 • Feature engineering logic
+
 • Visual design choices
+
 • Validation methodology
 
 🖥️ Desktop: Sidebar
