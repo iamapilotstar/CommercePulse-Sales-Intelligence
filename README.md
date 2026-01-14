@@ -34,13 +34,13 @@ Using SQL for data extraction, Power Query for transformation, and a star-schema
 **Technical Approach**
 Data Engineering, Modeling & Data Preparation
 
-This project follows a structured business intelligence pipeline, ensuring that all reported metrics are accurate, traceable, and decision-ready.
+• This project follows a structured business intelligence pipeline, ensuring that all reported metrics are accurate, traceable, and decision-ready.
 
-I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
+• I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
 
-To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
+• To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
 
-All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting..
+• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting..
 
 **Discount Percentage Mapping**
 
