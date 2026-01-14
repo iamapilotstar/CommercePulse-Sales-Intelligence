@@ -56,32 +56,32 @@ I created a conditional logic mapping:
 • If Promotion ID = PR002 (Buy 1 Get 1) → 50% discount
 • If Promotion ID = NULL → 0% discount
 
-This ensured that all discount logic was standardized and analytically usable.
+• This ensured that all discount logic was standardized and analytically usable.
 
 ---
 
 **Price Per Unit Imputation**
 
-To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
+• To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
 
 • Pull the correct price_per_unit from the product master
 • Maintain all transactional records from the fact table
 • Populate missing price values without losing sales data
 
-This step ensured pricing consistency across all transactions and preserved referential integrity.
+• This step ensured pricing consistency across all transactions and preserved referential integrity.
 
 ---
 
 **Derived Business Metrics**
 
-Several core KPIs did not exist in raw form and were engineered manually:
+• Several core KPIs did not exist in raw form and were engineered manually:
 
 • Total Sales = Units Sold × Price per Unit
 • Discount Value = Total Sales × Discount % / 100
 • Net Sales = Total Sales − Discount Value
 • Estimated Profit = 10% × Net Sales
 
-These derived columns enabled deeper business-level analysis rather than surface-level reporting.
+• These derived columns enabled deeper business-level analysis rather than surface-level reporting.
 
 ---
 
@@ -91,19 +91,19 @@ These derived columns enabled deeper business-level analysis rather than surface
 • Ensured no nulls remained in pricing or revenue-impacting fields
 • Removed invalid or incomplete rows where necessary
 
-This step ensured mathematical stability and prevented visual or KPI distortions.
+• This step ensured mathematical stability and prevented visual or KPI distortions.
 
 ---
 
 **Analytical Integrity**
 
-Every transformation was designed to preserve financial accuracy and business logic. This ensured that:
+• Every transformation was designed to preserve financial accuracy and business logic. This ensured that:
 
 • KPI totals matched transaction-level sums
 • Revenue and profit calculations were fully traceable
 • Aggregated metrics could be trusted by stakeholders
 
-This step is critical in enterprise BI systems, where incorrect numbers destroy credibility.
+• This step is critical in enterprise BI systems, where incorrect numbers destroy credibility.
 
 ---
 
