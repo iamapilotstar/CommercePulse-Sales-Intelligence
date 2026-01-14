@@ -13,8 +13,11 @@ I designed and built an interactive Power BI dashboard that transforms raw, frag
 The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders, providing dynamic insights into:
 
 • Product performance
+
 • Promotional effectiveness
+
 • Temporal sales trends
+
 • Profitability and order behavior
 
 Using SQL for data extraction, Power Query for transformation, and a star-schema data model, the dashboard enables fast, cross-dimensional slicing by product, city, promotion, and time. KPIs are powered by DAX measures and updated dynamically through filters and drilldowns 
