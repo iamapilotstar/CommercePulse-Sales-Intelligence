@@ -136,6 +136,7 @@ This repository contains the interactive Power BI dashboard and detailed documen
 • Validation methodology
 
 🖥️ Desktop: Sidebar
+
 📱 Mobile: Top of page
 
 ---
