@@ -29,28 +29,28 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a
 
 Why Star Schema?
 
-• Faster query performance: All dimension tables connect directly to the fact table, reducing join complexity and enabling quicker aggregations and dashboard responsiveness.
+• **Faster query performance:** All dimension tables connect directly to the fact table which reduces join complexity and enabling quicker aggregations and dashboard responsiveness.
 
-• Simpler and intuitive analysis: Makes slicing and filtering by product, city, promotion, and time straightforward for both BI tools and business users.
+• **Simpler and intuitive analysis:** Makes slicing and filtering by product, city, promotion and time straightforward for both BI tools and business users.
 
-• Optimized for BI tools: Power BI and DAX are designed to work most efficiently with star schemas, resulting in more reliable relationships and faster calculations.
+• **Optimized for BI tools:** Power BI and DAX are designed to work most efficiently with star schemas, resulting in more reliable relationships and faster calculations.
 
 ---
 
 **Tools & Technologies**
 
-• MS SQL Server – Data extraction and querying.
+• MS SQL Server - Data extraction and querying.
 
-• Power Query – ETL, data cleaning, transformation.
+• Power Query - ETL, data cleaning, transformation.
 
-• Power BI – Dashboarding, DAX measures, visual analytics.
+• Power BI - Dashboarding, DAX measures, visual analytics.
 
 ---
 
 **Technical Approach**
 Data Engineering, Modeling & Data Preparation
 
-• This project follows a structured business intelligence pipeline, ensuring that all reported metrics are accurate, traceable, and decision-ready.
+• This project follows a structured business intelligence pipeline which ensures that all reported metrics are accurate, traceable and decision-ready.
 
 • I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
 
