@@ -1,11 +1,13 @@
 # CommercePulse-Sales-Intelligence
 An end-to-end retail sales intelligence project built using SQL, Power Query, and Power BI. This dashboard transforms fragmented transactional data into actionable insights for inventory optimization, campaign ROI analysis, and executive decision-making.
+---
 
 💡 The Problem
 
 Retail businesses often operate with fragmented sales data spread across products, cities, promotions, and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
-As a result, decision-makers are forced to rely on static reports or delayed insights, slowing down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved 
+As a result, decision-makers are forced to rely on static reports or delayed insights, slowing down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
+---
 
 🔧 The Solution
 
