@@ -155,6 +155,6 @@ Revealed dramatic ROI differences between promotions:
 
 • Clearance Sale: ₹1.05M.
 
-• This allows marketing teams to double down on high-performing strategies.
+This allows marketing teams to double down on high-performing strategies.
 
-• Live KPI monitoring replaced static monthly reports with dynamic insights, accelerating decision cycles from weeks to minutes.
+Live KPI monitoring replaced static monthly reports with dynamic insights, accelerating decision cycles from weeks to minutes.
