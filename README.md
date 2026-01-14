@@ -145,11 +145,14 @@ This repository contains the interactive Power BI dashboard and detailed documen
 
 • Consolidated ₹129M in sales data into a single unified dashboard, eliminating the need to manually combine reports and enabling instant cross-functional analysis.
 
-• Identified revenue leaders like Apple iPhone 14 (₹21M) and volume champions (281 units), helping inventory teams prioritize high-impact SKUs.
+• Identified revenue leaders like Apple iPhone 14 (₹21M) and volume champions (281 units), helping inventory teams prioritize high-impact Stock Keeping Unit.
 
 Revealed dramatic ROI differences between promotions:
+
 • Summer Sale: ₹4.26M.
+
 • Weekend Flash: ₹1.87M.
+
 • Clearance Sale: ₹1.05M.
 
 • This allows marketing teams to double down on high-performing strategies.
