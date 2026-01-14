@@ -20,17 +20,17 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders, providing 
 
 • Profitability and order behavior
 
-Using SQL for data extraction, Power Query for transformation, and a star-schema data model, the dashboard enables fast, cross-dimensional slicing by product, city, promotion, and time. KPIs are powered by DAX measures and updated dynamically through filters and drilldowns 
+Using SQL for data extraction, Power Query for transformation, and a star-schema data model, the dashboard enables fast, cross-dimensional slicing by product, city, promotion, and time. KPIs are powered by DAX measures and updated dynamically through filters and drilldowns. 
 
 ---
 
 **Tools & Technologies**
 
-• MS SQL Server – Data extraction and querying
+• MS SQL Server – Data extraction and querying.
 
-• Power Query – ETL, data cleaning, transformation
+• Power Query – ETL, data cleaning, transformation.
 
-• Power BI – Dashboarding, DAX measures, visual analytics
+• Power BI – Dashboarding, DAX measures, visual analytics.
 
 ---
 
@@ -43,8 +43,7 @@ Data Engineering, Modeling & Data Preparation
 
 • To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
 
-• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting..
-
+• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting.
 ---
 
 **Discount Percentage Mapping**
@@ -55,9 +54,9 @@ To standardize this, I first created a discount mapping logic and then brought t
 
 I created a conditional logic mapping:
 
-• If Promotion ID = PR001 → 20% discount
-• If Promotion ID = PR002 (Buy 1 Get 1) → 50% discount
-• If Promotion ID = NULL → 0% discount
+• If Promotion ID = PR001 → 20% discount.
+• If Promotion ID = PR002 (Buy 1 Get 1) → 50% discount.
+• If Promotion ID = NULL → 0% discount.
 
 • This ensured that all discount logic was standardized and analytically usable.
 
@@ -67,9 +66,9 @@ I created a conditional logic mapping:
 
 • To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
 
-• Pull the correct price_per_unit from the product master
-• Maintain all transactional records from the fact table
-• Populate missing price values without losing sales data
+• Pull the correct price_per_unit from the product master.
+• Maintain all transactional records from the fact table.
+• Populate missing price values without losing sales data.
 
 • This step ensured pricing consistency across all transactions and preserved referential integrity.
 
@@ -79,10 +78,10 @@ I created a conditional logic mapping:
 
 • Several core KPIs did not exist in raw form and were engineered manually:
 
-• Total Sales = Units Sold × Price per Unit
-• Discount Value = Total Sales × Discount % / 100
-• Net Sales = Total Sales − Discount Value
-• Estimated Profit = 10% × Net Sales
+• Total Sales = Units Sold × Price per Unit.
+• Discount Value = Total Sales × Discount % / 100.
+• Net Sales = Total Sales − Discount Value.
+• Estimated Profit = 10% × Net Sales.
 
 • These derived columns enabled deeper business-level analysis rather than surface-level reporting.
 
@@ -90,9 +89,9 @@ I created a conditional logic mapping:
 
 **Missing Value Handling**
 
-• Null discount values were replaced with 0 (indicating no promotion)
-• Ensured no nulls remained in pricing or revenue-impacting fields
-• Removed invalid or incomplete rows where necessary
+• Null discount values were replaced with 0 (indicating no promotion).
+• Ensured no nulls remained in pricing or revenue-impacting fields.
+• Removed invalid or incomplete rows where necessary.
 
 • This step ensured mathematical stability and prevented visual or KPI distortions.
 
@@ -102,9 +101,9 @@ I created a conditional logic mapping:
 
 • Every transformation was designed to preserve financial accuracy and business logic. This ensured that:
 
-• KPI totals matched transaction-level sums
-• Revenue and profit calculations were fully traceable
-• Aggregated metrics could be trusted by stakeholders
+• KPI totals matched transaction-level sums.
+• Revenue and profit calculations were fully traceable.
+• Aggregated metrics could be trusted by stakeholders.
 
 • This step is critical in enterprise BI systems, where incorrect numbers destroy credibility.
 
@@ -138,9 +137,6 @@ This repository contains the interactive Power BI dashboard and detailed documen
 
 • Validation methodology
 
-🖥️ Desktop: Sidebar
-
-📱 Mobile: Top of page
 
 ---
 
@@ -151,9 +147,9 @@ This repository contains the interactive Power BI dashboard and detailed documen
 • Identified revenue leaders like Apple iPhone 14 (₹21M) and volume champions (281 units), helping inventory teams prioritize high-impact SKUs.
 
 Revealed dramatic ROI differences between promotions:
-• Summer Sale: ₹4.26M
-• Weekend Flash: ₹1.87M
-• Clearance Sale: ₹1.05M
+• Summer Sale: ₹4.26M.
+• Weekend Flash: ₹1.87M.
+• Clearance Sale: ₹1.05M.
 
 • This allows marketing teams to double down on high-performing strategies.
 • Live KPI monitoring replaced static monthly reports with dynamic insights, accelerating decision cycles from weeks to minutes.
