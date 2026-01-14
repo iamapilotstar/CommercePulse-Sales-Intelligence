@@ -24,7 +24,9 @@ Using SQL for data extraction, Power Query for transformation, and a star-schema
 🛠️ Tools & Technologies
 
 • MS SQL Server – Data extraction and querying
+
 • Power Query – ETL, data cleaning, transformation
+
 • Power BI – Dashboarding, DAX measures, visual analytics
 
 ---
