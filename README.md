@@ -1,4 +1,4 @@
-**🛒 CommercePulse – Sales Intelligence Dashboard for Smarter Inventory & Promotions**
+# 🛒 CommercePulse – Sales Intelligence Dashboard for Smarter Inventory & Promotions
 
 ---
 
