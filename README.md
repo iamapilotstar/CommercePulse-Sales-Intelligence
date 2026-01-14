@@ -1,7 +1,7 @@
-# **🛒 CommercePulse – Sales Intelligence Dashboard for Smarter Inventory & Promotions**
+# 🛒 CommercePulse – Sales Intelligence Dashboard for Smarter Inventory & Promotions
 ---
 
-# **The Problem**
+**The Problem**
 
 Retail businesses often operate with fragmented sales data spread across products, cities, promotions, and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
