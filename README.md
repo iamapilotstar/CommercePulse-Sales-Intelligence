@@ -1,7 +1,7 @@
 # 🛒 CommercePulse – Sales Intelligence Dashboard for Smarter Inventory & Promotions
 
 
-**The Problem**
+# **The Problem**
 
 Retail businesses often operate with fragmented sales data spread across products, cities, promotions, and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
@@ -9,7 +9,7 @@ As a result, decision-makers are forced to rely on static reports or delayed ins
 
 ---
 
-**The Solution**
+# **The Solution**
 
 I designed and built an interactive Power BI dashboard that transforms raw, fragmented retail sales data into a unified decision-making command center.
 
@@ -27,7 +27,7 @@ Using SQL for data extraction, Power Query for transformation, and a star-schema
 
 ---
 
-**Tools & Technologies**
+# **Tools & Technologies**
 
 • MS SQL Server – Data extraction and querying.
 
@@ -37,7 +37,7 @@ Using SQL for data extraction, Power Query for transformation, and a star-schema
 
 ---
 
-**Technical Approach**
+# **Technical Approach**
 Data Engineering, Modeling & Data Preparation
 
 • This project follows a structured business intelligence pipeline, ensuring that all reported metrics are accurate, traceable, and decision-ready.
@@ -50,7 +50,7 @@ Data Engineering, Modeling & Data Preparation
 
 ---
 
-**Discount Percentage Mapping**
+# **Discount Percentage Mapping**
 
 The dataset did not contain a dedicated numerical discount percentage column. Instead, discount information was embedded inside a Price Reduction Type field, which consisted of a mix of text and numbers (e.g., “Buy One Get One Free”, “20% Discount”).
 
@@ -68,7 +68,7 @@ I created a conditional logic mapping:
 
 ---
 
-**Price Per Unit Imputation**
+# **Price Per Unit Imputation**
 
 • To resolve this, I performed a Merge Query using a Left Outer Join with the Product Dimension table, using Product ID as the foreign key. This allowed me to:
 
@@ -82,7 +82,7 @@ I created a conditional logic mapping:
 
 ---
 
-**Derived Business Metrics**
+# **Derived Business Metrics**
 
 • Several core KPIs did not exist in raw form and were engineered manually:
 
@@ -98,7 +98,7 @@ I created a conditional logic mapping:
 
 ---
 
-**Missing Value Handling**
+# **Missing Value Handling**
 
 • Null discount values were replaced with 0 (indicating no promotion).
 • Ensured no nulls remained in pricing or revenue-impacting fields.
@@ -108,7 +108,7 @@ I created a conditional logic mapping:
 
 ---
 
-**Analytical Integrity**
+# **Analytical Integrity**
 
 • Every transformation was designed to preserve financial accuracy and business logic. This ensured that:
 
@@ -120,7 +120,7 @@ I created a conditional logic mapping:
 
 ---
 
-**Findings:**
+# **Findings:**
 
 • Top & Bottom 5 Products: Ranked by both revenue and quantity to guide inventory prioritization.
 
@@ -134,24 +134,8 @@ I created a conditional logic mapping:
 
 ---
 
-**Technical Report**
 
-This repository contains the interactive Power BI dashboard and detailed documentation explaining:
-
-• Data model architecture
-
-• KPI calculations
-
-• Feature engineering logic
-
-• Visual design choices
-
-• Validation methodology
-
-
----
-
-**Value Delivered**
+# **Value Delivered**
 
 • Consolidated ₹129M in sales data into a single unified dashboard, eliminating the need to manually combine reports and enabling instant cross-functional analysis.
 
