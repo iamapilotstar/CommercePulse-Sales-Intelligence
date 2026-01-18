@@ -13,6 +13,8 @@ Key operations:
   - Standardizing discount percentages using CASE logic
   - Handling missing discounts using COALESCE
   - Enriching fact data using LEFT JOINs with dimension tables
+    
+---
   
 Creating derived metrics:
   - Total Sale
@@ -22,6 +24,8 @@ Creating derived metrics:
   - Producing a final analytical table: `Final_View`
 
 This file ensures the dataset is consistent, complete and ready for business analysis.
+
+---
 
 
 ### 2. Data Analysis.sql
@@ -50,6 +54,7 @@ This SQL pipeline was created to:
 - Maintain traceability of business logic
 - Enable platform-independent analysis
 
+---
 
 ## How This Connects to Power BI
 
