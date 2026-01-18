@@ -14,7 +14,6 @@ Key operations:
   - Handling missing discounts using COALESCE
   - Enriching fact data using LEFT JOINs with dimension tables
     
----
   
 Creating derived metrics:
   - Total Sale
