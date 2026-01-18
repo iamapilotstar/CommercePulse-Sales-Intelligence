@@ -45,7 +45,8 @@ For the full SQL-based data cleaning, feature engineering, and KPI computation l
 
 • The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
 
-Why Star Schema?
+
+**Why Star Schema?**
 
 • **Faster query performance:** All dimension tables connect directly to the fact table which reduces join complexity and enabling quicker aggregations and dashboard responsiveness.
 
@@ -55,15 +56,6 @@ Why Star Schema?
 
 ---
 
-**Tools & Technologies**
-
-• MS SQL Server – Data extraction, transformation, feature engineering, and analytical querying.
-
-• Power Query – ETL, data cleaning, standardization, and preparation for BI.
-
-• Power BI – Dashboard development, DAX measures, and interactive visual analytics.
-
----
 
 **Discount Percentage Mapping**
 
@@ -171,3 +163,15 @@ Revealed dramatic ROI differences between promotions:
 This allows marketing teams to double down on high-performing strategies.
 
 Live KPI monitoring replaced static monthly reports with dynamic insights, accelerating decision cycles from weeks to minutes.
+
+---
+
+**Tools & Technologies**
+
+• MS SQL Server – Data extraction, transformation, feature engineering, and analytical querying.
+
+• Power Query – ETL, data cleaning, standardization, and preparation for BI.
+
+• Power BI – Dashboard development, DAX measures, and interactive visual analytics.
+
+
