@@ -174,18 +174,5 @@ Live KPI monitoring replaced static monthly reports with dynamic insights, accel
 
 ## Repository Structure
 
-CommercePulse-Sales-Intelligence/
-│
-├── SQL Data Cleaning and Analysis/
-│ ├── Data Cleaning and Engineering.sql
-│ ├── Data Analysis.sql
-│ └── README.md
-│
-├── Power BI/
-│ └── CommercePulse.pbix
-│
-├── Report/
-│ └── CommercePulse.pdf
-│
-└── README.md
+
 
