@@ -51,7 +51,7 @@ Why Star Schema?
 
 This project follows a structured business intelligence pipeline that ensures all reported metrics are accurate, traceable, and decision-ready. The solution combines SQL-based data engineering with Power Query transformations and a star-schema model to support scalable, high-performance analytics.
 
-For the full SQL-based data cleaning, feature engineering, and KPI computation logic, see the dedicated documentation here: [View SQL Pipeline Documentation](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
+For the full SQL-based data cleaning, feature engineering, and KPI computation logic, see the dedicated documentation here: [View SQL Pipeline](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
 
 Data Engineering, Modeling & Data Preparation:
 
