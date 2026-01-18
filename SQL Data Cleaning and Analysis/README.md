@@ -46,6 +46,8 @@ These queries replicate the logic used in Power BI visuals.
 
 ---
 
+Why i created this SQL Pipeline?
+
 This SQL pipeline was created to:
 - Ensure reproducibility of results
 - Validate Power BI metrics
