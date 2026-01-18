@@ -37,6 +37,16 @@ Why Star Schema?
 
 ---
 
+**Tools & Technologies**
+
+• MS SQL Server - Data extraction and querying.
+
+• Power Query - ETL, data cleaning, transformation.
+
+• Power BI - Dashboarding, DAX measures, visual analytics.
+
+---
+
 **Technical Approach**
 Data Engineering, Modeling & Data Preparation
 
@@ -47,16 +57,6 @@ Data Engineering, Modeling & Data Preparation
 • To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
 
 • All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting.
-
----
-
-**Tools & Technologies**
-
-• MS SQL Server - Data extraction and querying.
-
-• Power Query - ETL, data cleaning, transformation.
-
-• Power BI - Dashboarding, DAX measures, visual analytics.
 
 ---
 
