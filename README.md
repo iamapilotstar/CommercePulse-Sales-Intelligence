@@ -39,11 +39,11 @@ Why Star Schema?
 
 **Tools & Technologies**
 
-• MS SQL Server - Data extraction and querying.
+• MS SQL Server – Data extraction, transformation, feature engineering, and analytical querying.
 
-• Power Query - ETL, data cleaning, transformation.
+• Power Query – ETL, data cleaning, standardization, and preparation for BI.
 
-• Power BI - Dashboarding, DAX measures, visual analytics.
+• Power BI – Dashboard development, DAX measures, and interactive visual analytics.
 
 ---
 
