@@ -57,6 +57,6 @@ This SQL pipeline was created to:
 
 ---
 
-How This Connects to Power BI
+How this Connects to Power BI
 
 The final SQL output (`Final_View`) acts as the analytical foundation for the Power BI dashboard. All KPIs and visuals are based on the same business logic implemented in the Power Query Editor, ensuring consistency between backend transformations and frontend reporting.
