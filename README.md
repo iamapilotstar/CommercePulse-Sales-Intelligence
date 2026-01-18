@@ -5,7 +5,7 @@
 
 Retail businesses often operate with fragmented sales data spread across products, cities, promotions and time periods. This lack of a centralized analytical view creates blind spots in understanding performance trends, leads to inefficient inventory planning, and makes it difficult to accurately evaluate promotional ROI.
 
-As a result, decision-makers are forced to rely on static reports or delayed insights which slows down strategic actions and increasing operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
+As a result, decision-makers are forced to rely on static reports or delayed insights wwhich slows down strategic actions and increases operational risk. This problem becomes even more critical at scale, where thousands of transactions and multiple campaigns are involved.
 
 ---
 
@@ -13,7 +13,7 @@ As a result, decision-makers are forced to rely on static reports or delayed ins
 
 I designed and built an interactive Power BI dashboard that transforms raw and fragmented retail sales data into a unified decision-making command center.
 
-The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a dynamic insights into:
+The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing dynamic insights into:
 
 • Product performance
 
@@ -27,28 +27,25 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a
 
 **Technical Approach**
 
-This project follows a structured business intelligence pipeline that ensures all reported metrics are accurate, traceable, and decision-ready. The solution combines SQL-based data engineering with Power Query transformations and a star-schema model to support scalable, high-performance analytics.
+This project follows a structured business intelligence pipeline that ensures all reported metrics are accurate, traceable, and decision-ready. The solution combines SQL-based data engineering with Power Query transformations and a star-schema data model to support scalable, high-performance analytics.
 
-For the full SQL-based data cleaning, feature engineering, and KPI computation logic, see the dedicated documentation here: [View SQL Pipeline](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
+For the full SQL-based data cleaning, feature engineering, and KPI computation logic, view the complete SQL pipeline documentation here:  [View SQL Pipeline](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
+
 
 **Data Engineering, Modeling & Data Preparation:**
 
-• This project follows a structured business intelligence pipeline which ensures that all reported metrics are accurate, traceable and decision-ready.
+• I designed a star schema data model with a centralized fact table connected via one-to-many relationships to multiple dimension tables (Product, Customer, Promotion, Calendar), using single-directional filtering. This architecture enables efficient slicing and aggregation.
 
-• I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
+• To guarantee analytical trust, I implemented transaction-level validation logic to reconcile raw records with aggregated KPIs. This ensures that all dashboard metrics are mathematically correct and auditable.
 
-• To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
+• All transformations, cleaning steps, and feature engineering were implemented using both Power Query and SQL, allowing the dataset to be standardized, structured, and optimized for BI reporting.
 
-• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting.
-
-• I utilized SQL for data extraction, Power Query Editor for data transformation, and implemented a star-schema data model to optimize analytical performance and usability. 
-
-• The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
+• This dual-layer approach ensures consistency between backend transformations and frontend visual reporting
 
 
 **Why Star Schema?**
 
-• **Faster query performance:** All dimension tables connect directly to the fact table which reduces join complexity and enabling quicker aggregations and dashboard responsiveness.
+• **Faster query performance:** All dimension tables connect directly to the fact table which reduces join complexity and enables quicker aggregations and dashboard responsiveness.
 
 • **Simpler and intuitive analysis:** Makes slicing and filtering by product, city, promotion and time straightforward for both BI tools and business users.
 
@@ -150,7 +147,7 @@ This step is critical in enterprise BI systems, where incorrect numbers destroy 
 
 • Consolidated ₹129M in sales data into a single unified dashboard, eliminating the need to manually combine reports and enabling instant cross-functional analysis.
 
-• Identified revenue leaders like Apple iPhone 14 (₹21M) and volume champions (281 units), helping inventory teams prioritize high-impact Stock Keeping Unit.
+• Identified revenue leaders like Apple iPhone 14 (₹21M) and volume champions (281 units), helping inventory teams prioritize high-impact Stock Keeping Units (SKUs).
 
 Revealed dramatic ROI differences between promotions:
 
