@@ -1,4 +1,4 @@
-# SQL Data Cleaning & Analysis – CommercePulse
+# SQL Data Cleaning & Analysis – CommercePulse Sales Intelligence
 
 ## Overview
 This folder contains the SQL-based data engineering and analysis pipeline used for the CommercePulse project. The goal of this pipeline is to transform raw transactional data into a clean, business-ready dataset and generate all KPIs used in the Power BI dashboard.
