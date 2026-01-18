@@ -3,7 +3,6 @@
 ## Overview
 This folder contains the SQL-based data engineering and analysis pipeline used for the CommercePulse project. The goal of this pipeline is to transform raw transactional data into a clean, business-ready dataset and generate all KPIs used in the Power BI dashboard.
 
----
 
 ## Files in this Folder
 
@@ -24,7 +23,6 @@ Creating derived metrics:
 
 This file ensures the dataset is consistent, complete and ready for business analysis.
 
----
 
 ### 2. Data Analysis.sql
 This file contains all business-focused analytical queries used to generate KPIs and insights.
@@ -52,7 +50,6 @@ This SQL pipeline was created to:
 - Maintain traceability of business logic
 - Enable platform-independent analysis
 
----
 
 ## How This Connects to Power BI
 
