@@ -23,6 +23,24 @@ The solution analyzes ₹129M (£1.23M) in sales across 3,510 orders providing a
 
 • Profitability and order behavior
 
+---
+
+**Technical Approach**
+
+This project follows a structured business intelligence pipeline that ensures all reported metrics are accurate, traceable, and decision-ready. The solution combines SQL-based data engineering with Power Query transformations and a star-schema model to support scalable, high-performance analytics.
+
+For the full SQL-based data cleaning, feature engineering, and KPI computation logic, see the dedicated documentation here: [View SQL Pipeline](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
+
+**Data Engineering, Modeling & Data Preparation:**
+
+• This project follows a structured business intelligence pipeline which ensures that all reported metrics are accurate, traceable and decision-ready.
+
+• I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
+
+• To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
+
+• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting.
+
 • I utilized SQL for data extraction, Power Query Editor for data transformation, and implemented a star-schema data model to optimize analytical performance and usability. 
 
 • The star schema consists of a centralized fact table containing transactional sales records, connected via one-to-many relationships to multiple dimension tables such as Product, Customer, Promotion, City, and Calendar. 
@@ -44,24 +62,6 @@ Why Star Schema?
 • Power Query – ETL, data cleaning, standardization, and preparation for BI.
 
 • Power BI – Dashboard development, DAX measures, and interactive visual analytics.
-
----
-
-**Technical Approach**
-
-This project follows a structured business intelligence pipeline that ensures all reported metrics are accurate, traceable, and decision-ready. The solution combines SQL-based data engineering with Power Query transformations and a star-schema model to support scalable, high-performance analytics.
-
-For the full SQL-based data cleaning, feature engineering, and KPI computation logic, see the dedicated documentation here: [View SQL Pipeline](https://github.com/iamapilotstar/CommercePulse-Sales-Intelligence/tree/main/SQL%20Data%20Cleaning%20and%20Analysis)
-
-Data Engineering, Modeling & Data Preparation:
-
-• This project follows a structured business intelligence pipeline which ensures that all reported metrics are accurate, traceable and decision-ready.
-
-• I designed a star schema data model with a centralized fact table connected via **one-to-many** relationships to multiple dimension tables (Product, Customer, Promotion, Calendar) along with **single directional filtering**. This architecture enables efficient slicing.
-
-• To guarantee analytical trust, I implemented transaction-level validation tables that reconcile raw records with aggregated KPIs. This step ensures that all dashboard metrics are mathematically correct and auditable.
-
-• All transformations, cleaning steps, and feature engineering were implemented using Power Query, allowing the dataset to be standardized, structured, and optimized for BI reporting.
 
 ---
 
