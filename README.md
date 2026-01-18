@@ -189,7 +189,3 @@ CommercePulse-Sales-Intelligence/
 │ └── CommercePulse.pdf
 │
 └── README.md
-
-
-
-
