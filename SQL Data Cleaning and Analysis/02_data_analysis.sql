@@ -27,7 +27,7 @@ FROM Final_View
 
 SELECT CAST(ROUND(SUM(Total_Sale)/ COUNT(*),2) AS DECIMAL(12,2)) AS AOV FROM Final_View
 
--- Top 5 Products by Net Sales using CTE and Window Function Dense_Rank
+-- Top 5 Products by Net Sales using CTE and Window Function Row_number
 
 WITH Product_Rank AS(
 SELECT Product_Name, CAST(ROUND(SUM(Net_Sale),2) AS DECIMAL(12,2)) AS Top_5_products,
@@ -35,21 +35,19 @@ ROW_NUMBER() OVER(ORDER BY SUM(Net_Sale) DESC) AS P_rank
 FROM Final_View
 GROUP BY Product_Name
 )
-
 SELECT * FROM Product_rank
 WHERE P_rank <=5
 
--- Top 5 Products by Quantity using CTE and Window Function Row_Number
+-- Top 5 Products by Quantity using CTE and Window Function Dense_Rank
 
-WITH Quantity_Rank AS(
-SELECT Product_Name, SUM(Units_Sold) AS Quantity, SUM(Net_Sale) AS Net_Sale,
-ROW_NUMBER() OVER(ORDER BY SUM(Net_Sale) DESC, SUM (Units_Sold) DESC) AS Q_rank
+WITH Quantity_rank AS(
+SELECT  Product_Name, SUM(Units_Sold) AS Quantity, 
+DENSE_RANK() OVER(ORDER BY SUM(Units_Sold) DESC) AS Q_rank
 FROM Final_View
 GROUP BY Product_Name
 )
-
-SELECT * FROM Quantity_Rank
-WHERE Q_rank <= 5
+SELECT * FROM Quantity_rank
+WHERE Q_rank <=5
 
 
 -- Discount Value by Promotion
@@ -67,6 +65,7 @@ SELECT TOP 4 YEAR(Date_dd_mm_yyyy) AS Year, CAST(ROUND(SUM(Net_Sale),2) AS DECIM
 GROUP BY YEAR(Date_dd_mm_yyyy)
 ORDER BY 
 	YEAR(Date_dd_mm_yyyy) ASC
+
 
 
 
