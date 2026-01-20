@@ -27,19 +27,30 @@ FROM Final_View
 
 SELECT CAST(ROUND(SUM(Total_Sale)/ COUNT(*),2) AS DECIMAL(12,2)) AS AOV FROM Final_View
 
--- Top 5 Products by Net Sales
+-- Top 5 Products by Net Sales using CTE and Window Function Dense_Rank
 
-SELECT TOP 5 Product_Name, CAST(ROUND(SUM(Net_Sale),2) AS DECIMAL(12,2)) AS Top_5_products FROM Final_View
+WITH Product_Rank AS(
+SELECT Product_Name, CAST(ROUND(SUM(Net_Sale),2) AS DECIMAL(12,2)) AS Top_5_products,
+ROW_NUMBER() OVER(ORDER BY SUM(Net_Sale) DESC) AS P_rank
+FROM Final_View
 GROUP BY Product_Name
-ORDER BY SUM(Net_Sale) DESC
+)
 
--- Top 5 Products by Quantity
+SELECT * FROM Product_rank
+WHERE P_rank <=5
 
-SELECT TOP 5 Product_Name, SUM(Units_Sold) AS Quantity, SUM(Net_Sale) AS Net_Sale FROM Final_View
+-- Top 5 Products by Quantity using CTE and Window Function Row_Number
+
+WITH Quantity_Rank AS(
+SELECT Product_Name, SUM(Units_Sold) AS Quantity, SUM(Net_Sale) AS Net_Sale,
+ROW_NUMBER() OVER(ORDER BY SUM(Net_Sale) DESC, SUM (Units_Sold) DESC) AS Q_rank
+FROM Final_View
 GROUP BY Product_Name
-ORDER BY
-	SUM(Net_Sale) DESC,
-	SUM (Units_Sold) DESC
+)
+
+SELECT * FROM Quantity_Rank
+WHERE Q_rank <= 5
+
 
 -- Discount Value by Promotion
 SELECT TOP 3 Promotion_Name, CAST(ROUND(SUM(Discount_Values),2) AS DECIMAL(10,2)) AS Total_Discount_Value FROM Final_View
@@ -56,5 +67,6 @@ SELECT TOP 4 YEAR(Date_dd_mm_yyyy) AS Year, CAST(ROUND(SUM(Net_Sale),2) AS DECIM
 GROUP BY YEAR(Date_dd_mm_yyyy)
 ORDER BY 
 	YEAR(Date_dd_mm_yyyy) ASC
+
 
 
