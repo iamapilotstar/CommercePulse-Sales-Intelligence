@@ -49,7 +49,8 @@ SELECT Date_dd_mm_yyyy,CustomerID,PromotionID,Product_ID,Units_Sold,Price_Per_Un
 FROM Net_Sales;
 
 --Displaying the final view
-SELECT * FROM Final_View
+SELECT * FROM Fact_Sales
+
 
 
 
