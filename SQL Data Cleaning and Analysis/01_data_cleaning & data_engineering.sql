@@ -43,13 +43,13 @@ SELECT *, (Total_Sale * Discount_Percentages) / 100.0 AS Discount_Values FROM Sa
 CREATE VIEW Net_Sales AS
 Select *, Total_Sale - Discount_values AS Net_Sale FROM Discount_value
 
--- Creating Profit as well as the final view to display for Analysis
-CREATE VIEW Final_View AS
-SELECT Date_dd_mm_yyyy, CustomerID, PromotionID, Product_ID, Units_Sold, Price_Per_Units,Promotion_Name, Product_Name, Product_Line, Discount_Percentages, Total_Sale, Discount_Values, 
-Net_Sale, 0.1 * Net_Sale AS Estimated_Profit FROM Net_Sales
-
+-- Creating Final Fact table to display for Analysis
+CREATE VIEW Fact_Sales AS
+SELECT Date_dd_mm_yyyy,CustomerID,PromotionID,Product_ID,Units_Sold,Price_Per_Units,Discount_Percentages,Total_Sale,Discount_Values,Net_Sale
+FROM Net_Sales;
 
 --Displaying the final view
 SELECT * FROM Final_View
+
 
 
